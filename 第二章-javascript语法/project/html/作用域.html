@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function square(num){
+				total = num*num;
+				return total;
+			};
+			//var total = 20;
+			var number = square(20);
+			var total = 20;
+			alert(total);//返回的结果是400,也就是说如果脚本中已经存在一个与之同名的全局变量,这个函数就会改变那个全局变量的值.
+		</script>
+	</body>
+</html>

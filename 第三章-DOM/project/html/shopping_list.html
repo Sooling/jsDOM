@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Shopping list</title>
+		<style type="text/css">
+			body{
+				color: white;
+				background-color: black;
+			}
+			p{
+				color: yellow;
+				font-family: "arial",sans-serif;
+				font-size: 1.2em;
+			}
+			#purchases{
+				border: 1px solid white;
+				background-color: #333;
+				color: #ccc;
+				padding: 1em;
+			}
+			#purchases li{
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>what to buy</h1>
+		<p title="a gentle reminder">Don't forget to buy this stuff.</p>
+		<p>this is just a text</p>
+		<ul id="purchases">
+			<li>A tin of beans</li>
+			<li class="sale">Cheese</li>
+			<li class="sale inportant">Milk</li>
+		</ul>
+		<script src="../js/getElementsByClassName.js"></script>
+		<script>
+			var items = document.getElementsByTagName("li");
+			for (var i = 0; i<items.length; i++){
+				alert(typeof items[i]);
+			};
+			var paras = document.getElementsByTagName("p");
+			for (var i = 0; i<paras.length; i++){				
+				var title_text = paras[i].getAttribute("title");
+				if(title_text){
+					//当检查某项数据是否是null值时，我们其实是在检查它是否存在。这种检查可以简化为直接把被检查的数据用作if语句的条件。
+					//判断是否存在title属性的值,如果存在就显示出来
+					paras[i].setAttribute("title","new title");
+					alert(title_text);
+					alert(paras[i].getAttribute("title"));
+				};
+			};
+			/* var oUl = document.getElementsByTagName("ul")[0];
+			var items = getElementsByClassName(oUl,"sale");
+			alert(items.length); */
+		</script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/popUp.js"></script>
+		<script src="../js/preparelinks.js"></script>
+	</head>
+	<body>
+		<a href="javascript:popUp('https://www.baidu.com')">百度</a>
+		<!-- 伪协议调用js函数 -->
+		<a href="#" onclick="popUp('https://www.baidu.com');return false;">百度</a>
+		<!-- 事件处理函数调用js函数 -->
+		<a href="https://www.baidu.com" onclick="popUp(this.getAttribute('href'));return false;">百度</a>
+		<!-- 即使js被禁用也能打开网页，虽然没有之前打开新窗口的效果 -->
+		<a href="https://www.baidu.com" class="popup">百度</a>
+	</body>
+</html>

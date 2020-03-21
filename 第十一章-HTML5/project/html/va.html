@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<video controls="controls" id="myVideo">
+			<source src="../video/movie.mp4" type="video/mp4"></source>
+			<source src="../video/movie.ogg" type="video/ogg"></source>
+			<source src="../video/movie.webm" type="video/webm"></source>
+			<!-- <object width="" height="" type="application/x-shockwave-flash" data="movie.swf">
+				<param name="movie" value="movie.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=movie.swf" />
+			</object> -->
+			<p>
+				<a href="../video/movie.ogg">下载视频</a>
+			</p>			 
+		</video>
+		<button type="button" id="play">play</button>
+		<input type="color" name="" id="" value="" />
+		<input type="range" name="" id="" value="" max="100" min="10" step="10"/>
+		<input type="daten" name="" id="" value="" />
+		<script type="text/javascript">
+			var myVideo = document.getElementById("myVideo");
+			var play = document.getElementById('play');
+			
+			
+			play.onclick = function(){				
+				if(myVideo.paused){
+					/* myVideo.currentTime = 2; */
+					/* alert(myVideo.duration); */
+					/* myVideo.play(); */
+					/* alert(myVideo.currentTime); */
+				}else{
+					myVideo.pause();
+				};
+			};
+			if(myVideo.ended){
+				myVideo.currentTime = 0;
+			};//无法执行
+			/* myVideo.onended = function(){
+				myVideo.currentTime = 0;
+			} */
+			//可以执行
+		</script>
+	</body>
+</html>
